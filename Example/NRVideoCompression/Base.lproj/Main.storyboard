@@ -1,90 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tar-4v-cTa">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <scene sceneID="E7p-Oy-17q">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="NRVideoCompression_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cow-yE-GI4" customClass="ViewController" customModule="NRVideoCompression_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="ZVU-Ce-Uyq"/>
+                        <viewControllerLayoutGuide type="bottom" id="rtb-pb-Jzx"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="mzl-Qk-zQi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFt-3p-s2d">
-                                <rect key="frame" x="99" y="292" width="176" height="30"/>
-                                <color key="backgroundColor" red="0.13978169169999999" green="0.67058140560000001" blue="0.74698153410000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1S5-Au-Dyz">
+                                <rect key="frame" x="99" y="96" width="176" height="30"/>
+                                <color key="backgroundColor" red="0.13978169169999999" green="0.67058140560000001" blue="0.74698153410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="dwt-y5-T7b"/>
-                                    <constraint firstAttribute="width" constant="176" id="nNq-Uu-pOY"/>
+                                    <constraint firstAttribute="width" constant="176" id="8AX-Rw-C3F"/>
+                                    <constraint firstAttribute="height" constant="30" id="vkp-FT-gYW"/>
                                 </constraints>
                                 <state key="normal" title="Select Video">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="selectVideoButtonClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cOd-nm-f7B"/>
+                                    <action selector="selectVideoButtonClicked:" destination="Cow-yE-GI4" eventType="touchUpInside" id="PKg-aG-I4k"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="IBS-yd-QQe">
-                                <rect key="frame" x="99" y="360" width="176" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="mSd-U4-Xgz">
+                                <rect key="frame" x="99" y="164" width="176" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="176" id="GSW-4m-Wf2"/>
-                                    <constraint firstAttribute="height" constant="21" id="kaZ-O8-Kyy"/>
+                                    <constraint firstAttribute="height" constant="21" id="NIe-VG-iPA"/>
+                                    <constraint firstAttribute="width" constant="176" id="xpB-Br-GAY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdj-py-uiE">
-                                <rect key="frame" x="99" y="408" width="176" height="30"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tba-Kg-LhJ">
+                                <rect key="frame" x="99" y="212" width="176" height="30"/>
+                                <color key="backgroundColor" red="0.33333334329999997" green="0.33333334329999997" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="176" id="CmG-ZY-agm"/>
-                                    <constraint firstAttribute="height" constant="30" id="ewO-vI-Dsf"/>
+                                    <constraint firstAttribute="height" constant="30" id="BJn-Wf-C58"/>
+                                    <constraint firstAttribute="width" constant="176" id="bHr-LS-qbb"/>
                                 </constraints>
                                 <state key="normal" title="Compress"/>
                                 <connections>
-                                    <action selector="compressButtonClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OzF-Jc-6ee"/>
+                                    <action selector="compressButtonClicked:" destination="Cow-yE-GI4" eventType="touchUpInside" id="QL4-Yh-BTF"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Video Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="crW-na-CIn">
-                                <rect key="frame" x="99" y="465" width="176" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Video Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="ACk-dg-j3d">
+                                <rect key="frame" x="99" y="269" width="176" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="176" id="oJT-An-BBx"/>
-                                    <constraint firstAttribute="height" constant="21" id="tHH-ZW-kZD"/>
+                                    <constraint firstAttribute="height" constant="21" id="h9c-5P-0jk"/>
+                                    <constraint firstAttribute="width" constant="176" id="jZS-RZ-PQT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nY-nW-g35">
+                                <rect key="frame" x="32" y="298" width="311" height="30"/>
+                                <state key="normal" title="Play Video"/>
+                                <connections>
+                                    <action selector="playVideo:" destination="Cow-yE-GI4" eventType="touchUpInside" id="t91-Sy-Ifp"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="IBS-yd-QQe" secondAttribute="bottom" constant="286" id="7ej-2F-y1Y"/>
-                            <constraint firstItem="xdj-py-uiE" firstAttribute="top" secondItem="IBS-yd-QQe" secondAttribute="bottom" constant="27" id="9mr-se-Nzi"/>
-                            <constraint firstItem="crW-na-CIn" firstAttribute="top" secondItem="xdj-py-uiE" secondAttribute="bottom" constant="27" id="QY4-1G-dNl"/>
-                            <constraint firstItem="IBS-yd-QQe" firstAttribute="leading" secondItem="xdj-py-uiE" secondAttribute="leading" id="WJT-hC-wju"/>
-                            <constraint firstItem="IBS-yd-QQe" firstAttribute="top" secondItem="HFt-3p-s2d" secondAttribute="bottom" constant="38" id="Wcj-AP-4gW"/>
-                            <constraint firstItem="HFt-3p-s2d" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="dog-bT-t8i"/>
-                            <constraint firstItem="IBS-yd-QQe" firstAttribute="leading" secondItem="HFt-3p-s2d" secondAttribute="leading" id="otg-mS-23v"/>
-                            <constraint firstItem="IBS-yd-QQe" firstAttribute="leading" secondItem="crW-na-CIn" secondAttribute="leading" id="vtn-jD-eaA"/>
+                            <constraint firstItem="1S5-Au-Dyz" firstAttribute="centerX" secondItem="mzl-Qk-zQi" secondAttribute="centerX" id="5Cz-0e-prd"/>
+                            <constraint firstItem="mSd-U4-Xgz" firstAttribute="top" secondItem="1S5-Au-Dyz" secondAttribute="bottom" constant="38" id="6gW-mb-RSH"/>
+                            <constraint firstAttribute="trailing" secondItem="9nY-nW-g35" secondAttribute="trailing" constant="32" id="9r5-g0-GIU"/>
+                            <constraint firstItem="tba-Kg-LhJ" firstAttribute="top" secondItem="mSd-U4-Xgz" secondAttribute="bottom" constant="27" id="AuY-17-W2a"/>
+                            <constraint firstItem="mSd-U4-Xgz" firstAttribute="leading" secondItem="tba-Kg-LhJ" secondAttribute="leading" id="C0j-fs-B4r"/>
+                            <constraint firstItem="1S5-Au-Dyz" firstAttribute="top" secondItem="ZVU-Ce-Uyq" secondAttribute="bottom" constant="32" id="F59-CW-770"/>
+                            <constraint firstItem="9nY-nW-g35" firstAttribute="top" secondItem="ACk-dg-j3d" secondAttribute="bottom" constant="8" id="OR8-g3-iJt"/>
+                            <constraint firstItem="mSd-U4-Xgz" firstAttribute="leading" secondItem="ACk-dg-j3d" secondAttribute="leading" id="Y3b-CJ-EHV"/>
+                            <constraint firstItem="mSd-U4-Xgz" firstAttribute="leading" secondItem="1S5-Au-Dyz" secondAttribute="leading" id="bCv-tA-n9t"/>
+                            <constraint firstItem="ACk-dg-j3d" firstAttribute="top" secondItem="tba-Kg-LhJ" secondAttribute="bottom" constant="27" id="f1v-Jf-4u8"/>
+                            <constraint firstItem="9nY-nW-g35" firstAttribute="leading" secondItem="mzl-Qk-zQi" secondAttribute="leading" constant="32" id="zNh-Ku-Q8f"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationItem key="navigationItem" id="IyW-Fi-oNw"/>
                     <connections>
-                        <outlet property="newVideoSize" destination="crW-na-CIn" id="Uha-qC-c14"/>
-                        <outlet property="originalVideoSize" destination="IBS-yd-QQe" id="icw-Pp-0sv"/>
+                        <outlet property="newVideoSize" destination="ACk-dg-j3d" id="txz-hz-0Pp"/>
+                        <outlet property="originalVideoSize" destination="mSd-U4-Xgz" id="wTX-Xz-5OZ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i5Y-ng-4Wy" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="192.5" y="361.5"/>
+            <point key="canvasLocation" x="1130.4000000000001" y="361.16941529235385"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AOb-dL-Ydh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tar-4v-cTa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7mc-vT-lRe">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Cow-yE-GI4" kind="relationship" relationship="rootViewController" id="ktd-rd-Fzy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GGH-MR-4x0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="191.19999999999999" y="361.16941529235385"/>
         </scene>
     </scenes>
 </document>
