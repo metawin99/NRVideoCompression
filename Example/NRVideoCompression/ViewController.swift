@@ -16,6 +16,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     
     @IBOutlet weak var originalVideoSize: UILabel!
     @IBOutlet weak var newVideoSize: UILabel!
+    var selector = ""
     
     var originalVideoUrl: NSURL?
     var compressUrl: NSURL?
@@ -34,12 +35,32 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     }
     
     func openImagePicker() {
-        let controller = UIImagePickerController()
-        //controller.allowsEditing = false
-        controller.sourceType = .camera
-        controller.mediaTypes = [kUTTypeMovie as String]
-        controller.delegate = self
-        self.present(controller, animated: true, completion: nil)
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        let actionSheetController = UIAlertController(title: "Select upload type", message: "", preferredStyle: .actionSheet)
+        let takePhotoActionButton = UIAlertAction(title: "Take photo", style: .default) { action -> Void in
+            picker.sourceType = .camera
+            self.present(picker, animated: true, completion:nil)
+            self.selector = "camera"
+        }
+        let libActionButton = UIAlertAction(title: "Lib", style: .default) { action -> Void in
+            picker.sourceType = .photoLibrary
+            self.present(picker, animated: true, completion:nil)
+            self.selector = "photo"
+        }
+        let videoActionButton = UIAlertAction(title: "Video", style: .default) { action -> Void in
+            picker.mediaTypes = [kUTTypeMovie as String, kUTTypeVideo as String]
+            self.present(picker, animated: true, completion:nil)
+            self.selector = "video"
+        }
+        let cancelActionButton = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
+        }
+        
+        actionSheetController.addAction(takePhotoActionButton)
+        actionSheetController.addAction(libActionButton)
+        actionSheetController.addAction(videoActionButton)
+        actionSheetController.addAction(cancelActionButton)
+        self.present(actionSheetController, animated: true, completion: nil)
         
     }
     
@@ -70,10 +91,11 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     
     @IBAction func compressButtonClicked(_ sender: Any) {
         if let _ = self.originalVideoUrl {
+            self.originalVideoSize.text = "Loading"
             //AVAssetExportPresetLowQuality
             //AVAssetExportPresetMediumQuality
             //AVAssetExportPresetHighestQuality
-            NRVideoCompressor.compressVideoWithQuality(presetName: AVAssetExportPresetLowQuality, inputURL: originalVideoUrl!, completionHandler: { (outputUrl) in
+            NRVideoCompressor.compressVideoWithQuality(presetName: AVAssetExportPresetMediumQuality, inputURL: originalVideoUrl!, completionHandler: { (outputUrl) in
                 self.originalVideoUrl = nil
                 self.originalVideoSize.text = "0 MB"
                 let compressSize = NSData(contentsOf: outputUrl as URL)
